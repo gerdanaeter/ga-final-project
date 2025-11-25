@@ -1,0 +1,23 @@
+body {
+  font-family: 'Cabin', sans-serif;
+  font-size: 100%;
+}
+
+img,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+picture {
+  display: block;
+}
+
+a {
+  color: var(--blue-for-links);
+}
+
+a:hover {
+  color: var(--blue-for-hovered-links);
+}

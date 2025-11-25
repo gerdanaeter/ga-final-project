@@ -1,0 +1,84 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden; /* prevents double scrollbars */
+  font-family: 'Arial Narrow', sans-serif;
+  color: green;
+  text-align: center;
+}
+
+/* Scrollable inner content */
+.scroll-content {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll; /* scrolls only the inner area */
+  position: relative;
+  z-index: 0;
+  box-sizing: border-box;
+  padding: 80px 100px;
+}
+
+/* Fixed frame around the viewport */
+.frame {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none; /* allows user to scroll/click content through it */
+  z-index: 10;
+}
+
+/* Borders (each side) */
+.border {
+  position: absolute;
+  color: #0047ff;
+  background-color: lightgreen;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  pointer-events: auto; /* enables clicks on nav links */
+  text-align: center;
+  padding: 3rem;
+}
+
+/* Top */
+.border.top {
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 0;
+}
+
+/* Bottom */
+.border.bottom {
+  width: 2rem;
+  left: 0;
+  right: 0;
+}
+
+/* Left + Right columns */
+.border.left,
+.border.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 2rem;
+
+}
+
+.border.left {
+  left: 0;
+  align-items: flex-start;
+}
+
+.border.right {
+  right: 0;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.border a {
+  color: inherit;
+  text-decoration: none;
+  margin: 6rem 0;
+}
