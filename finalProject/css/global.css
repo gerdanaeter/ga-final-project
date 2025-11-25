@@ -21,3 +21,8 @@ a {
 a:hover {
   color: var(--blue-for-hovered-links);
 }
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
